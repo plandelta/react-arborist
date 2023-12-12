@@ -1,3 +1,8 @@
+Forked from [brimdata/react-arborist](https://github.com/brimdata/react-arborist).
+
+#### Fixes
+- `compute-drop-sblings` issues - [PR 199](https://github.com/brimdata/react-arborist/pull/199)
+
 ![Logo](https://user-images.githubusercontent.com/3460638/161630636-3512fe81-41c2-4ee5-8f7e-adaad07033b6.svg)
 
 <h1>React Arborist</h1>
@@ -167,9 +172,9 @@ Passing an id to the _selection_ prop will select and scroll to that node whenev
 function App() {
   const chatId = useCurrentChatId();
 
-  /* 
-    Whenever the currentChatRoomId changes, 
-    the tree will automatically select it and scroll to it. 
+  /*
+    Whenever the currentChatRoomId changes,
+    the tree will automatically select it and scroll to it.
   */
 
   return <Tree initialData={data} selection={chatId} />;
