@@ -41,12 +41,12 @@ export default function GmailSidebar() {
                 <Tree
                   ref={globalTree}
                   initialData={gmailData}
-                  width={width}
-                  height={height}
+                  width={270}
+                  height={400}
                   rowHeight={32}
                   renderCursor={Cursor}
                   searchTerm={term}
-                  paddingBottom={32}
+                  // paddingBottom={32}
                   disableEdit={(data) => data.readOnly}
                   disableDrop={({ parentNode, dragNodes }) => {
                     if (

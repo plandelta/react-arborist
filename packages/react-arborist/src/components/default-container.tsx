@@ -4,6 +4,7 @@ import { focusNextElement, focusPrevElement } from "../utils";
 import { ListOuterElement } from "./list-outer-element";
 import { ListInnerElement } from "./list-inner-element";
 import { RowContainer } from "./row-container";
+import { ScrollArea } from "./scroll-area";
 
 let focusSearchTerm = "";
 let timeoutId: any = null;
