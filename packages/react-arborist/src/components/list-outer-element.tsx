@@ -1,42 +1,15 @@
 import { forwardRef } from "react";
 import { useTreeApi } from "../context";
-import { treeBlur } from "../state/focus-slice";
-import { Cursor } from "./cursor";
+import { DefaultListOuterElement } from "./default-list-outer-element";
 
-export const ListOuterElement = forwardRef(function Outer(
-  props: React.HTMLProps<HTMLDivElement>,
-  ref
-) {
-  const { children, ...rest } = props;
+export const ListOuterElement = forwardRef<HTMLDivElement, React.HTMLProps<HTMLDivElement>>(function ListOuter(props, ref) {
   const tree = useTreeApi();
+  const OuterElementType = tree.props.renderListOuterElement || DefaultListOuterElement;
+
   return (
-    <div
-      // @ts-ignore
+    <OuterElementType
+      {...props}
       ref={ref}
-      {...rest}
-      onClick={(e) => {
-        if (e.currentTarget === e.target) tree.deselectAll();
-      }}
-    >
-      <DropContainer />
-      {children}
-    </div>
+    />
   );
 });
-
-const DropContainer = () => {
-  const tree = useTreeApi();
-  return (
-    <div
-      style={{
-        height: tree.visibleNodes.length * tree.rowHeight,
-        width: "100%",
-        position: "absolute",
-        left: "0",
-        right: "0",
-      }}
-    >
-      <Cursor />
-    </div>
-  );
-};

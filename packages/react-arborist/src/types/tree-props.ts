@@ -1,7 +1,7 @@
 import { BoolFunc } from "./utils";
 import * as handlers from "./handlers";
 import * as renderers from "./renderers";
-import { ElementType, MouseEventHandler } from "react";
+import { ElementType, ForwardRefExoticComponent, HTMLProps, MouseEventHandler, RefAttributes } from "react";
 import { ListOnScrollProps } from "react-window";
 import { NodeApi } from "../interfaces/node-api";
 import { OpenMap } from "../state/open-slice";
@@ -24,6 +24,7 @@ export interface TreeProps<T> {
   renderDragPreview?: ElementType<renderers.DragPreviewProps>;
   renderCursor?: ElementType<renderers.CursorProps>;
   renderContainer?: ElementType<{}>;
+  renderListOuterElement?: ElementType<HTMLProps<HTMLElement>> | ForwardRefExoticComponent<Omit<HTMLProps<HTMLDivElement>, "ref"> & RefAttributes<HTMLDivElement>>;
 
   /* Sizes */
   rowHeight?: number;
