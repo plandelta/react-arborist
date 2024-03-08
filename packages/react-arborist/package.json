@@ -1,6 +1,6 @@
 {
-  "name": "react-arborist",
-  "version": "3.4.0",
+  "name": "@plandelta/react-arborist",
+  "version": "3.4.0-alpha.4",
   "license": "MIT",
   "source": "src/index.ts",
   "main": "dist/main/index.js",
