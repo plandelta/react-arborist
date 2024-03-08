@@ -1,3 +1,5 @@
+export { useDrag as useDragArborist } from "react-dnd";
+
 /* The Public Api */
 export { Tree } from "./components/tree";
 export * from "./types/handlers";
