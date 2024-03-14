@@ -78,4 +78,7 @@ export interface TreeProps<T> {
   onClick?: MouseEventHandler;
   onContextMenu?: MouseEventHandler;
   dndManager?: ReturnType<typeof useDragDropManager>;
+
+  /* PlanDelta */
+  tabIndex?: number;
 }

@@ -27,7 +27,7 @@ export function DefaultContainer() {
       }}
       onContextMenu={tree.props.onContextMenu}
       onClick={tree.props.onClick}
-      tabIndex={0}
+      tabIndex={tree.props.tabIndex ? tree.props.tabIndex : 0}
       onFocus={(e) => {
         if (!e.currentTarget.contains(e.relatedTarget)) {
           tree.onFocus();
